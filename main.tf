@@ -1,3 +1,21 @@
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "3.85.0"
+    }
+  }
+}
+
+provider "google" {
+# Configuration options
+  project = "theta-style-416117"
+  region = "us-east1"
+  zone = "us-east1-a"
+  credentials = "theta-style-416117-9b5db268d2cf.json"
+}
+
+
 
 # Define a Google Cloud Storage (GCS) bucket resource
 resource "google_storage_bucket" "malgus_gcp" {
